@@ -1,0 +1,8 @@
+Create one clean full-body reference sprite for Codex pet Auri Ark.
+
+Pet identity: A small lantern-bird ark guide for Taala and App-Ark: optimistic, intelligent, gentle, future-facing, made for AI-native education. Mix a rounded bird/owl body with a tiny ark or sail motif, a glowing chest core like a compass lantern, soft teal and sunrise coral accents, simple expressive eyes, and a helper vibe. Feels like a mentor for students building real projects with AI, not a cold robot..
+Style: Pet-safe sprite: compact full-body mascot, readable in a 192x208 cell, clear silhouette, simple face, stable palette/materials, and crisp edges for chroma-key extraction. Style `3d-toy`: Stylized 3D toy mascot with smooth rounded forms, simple materials, clear silhouette, and no photoreal complexity. User style notes: Friendly premium mascot style, rounded toy proportions, clean silhouette, readable at small size, no logos, no text, no screen UI..
+
+Brand inspiration: Taala / App-Ark: AI-native education and long-term growth support with a future-ark spirit, warm guidance, project-based learning, structured thinking, and optimistic student-builder energy. Use only broad mascot-safe cues; do not copy readable logos, marks, UI screenshots, or text.
+
+Place a single centered pose on a perfectly flat pure magenta #FF00FF chroma-key background. Keep the full pet visible, compact, readable at 192x208, and easy to animate. Preserve approved reference identity cues. No scenery, text, borders, checkerboard transparency, shadows, glows, detached effects, or extra props. Keep #FF00FF and close colors out of the pet, props, highlights, and effects.

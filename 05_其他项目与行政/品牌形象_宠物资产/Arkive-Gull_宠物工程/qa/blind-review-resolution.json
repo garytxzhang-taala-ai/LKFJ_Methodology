@@ -1,0 +1,15 @@
+{
+  "decision": "reject_installation",
+  "severity": "major",
+  "reviewed_by": "parent",
+  "failed_checks": [
+    "direction-blind-validation horizontal-4 hard gate",
+    "direction-blind-validation vertical-1 hard gate"
+  ],
+  "evidence": [
+    "The final blind consensus classified horizontal-4 A, source direction 090, as screen-left instead of screen-right.",
+    "The final blind consensus classified vertical-1 A, source direction 000, as down instead of up.",
+    "Atlas validation and transparency validation pass, and the pet is visually usable as a candidate, but mandatory blind direction QA does not pass."
+  ],
+  "result": "Kept the latest spritesheet as a candidate package for preview and further iteration; did not install it into the Codex pets directory as a finalized v2 pet."
+}

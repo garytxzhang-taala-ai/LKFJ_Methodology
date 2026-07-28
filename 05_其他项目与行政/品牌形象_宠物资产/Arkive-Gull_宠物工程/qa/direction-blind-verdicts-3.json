@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "A beak projects left; B beak is centered frontally"
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "A has left profile beak; B is mostly frontal with little lateral cue"
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A beak points left; B beak and face angle point right"
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "Both beaks extend toward screen-left"
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "Both show leftward beak projection and sunglasses angle"
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "Both beaks sit left of face center"
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "ambiguous",
+      "B": "screen-left",
+      "reason": "A is frontal; B beak projects left"
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "down",
+      "reason": "Both have lowered beak and sunglasses under brow"
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "A beak sits high; B beak is lowered"
+    },
+    {
+      "pair": "vertical-3",
+      "A": "down",
+      "B": "up",
+      "reason": "A head dips with low beak; B beak sits high"
+    },
+    {
+      "pair": "vertical-4",
+      "A": "down",
+      "B": "up",
+      "reason": "A sunglasses and beak are low; B beak is raised"
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "ambiguous",
+      "reason": "A beak tilts upward; B is mostly level"
+    },
+    {
+      "pair": "vertical-6",
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A beak is level; B beak is centered low"
+    },
+    {
+      "pair": "vertical-7",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "Both are mainly lateral with weak vertical tilt"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "arkive-gull",
+  "displayName": "Arkive Gull",
+  "description": "A chubby pixel bird mascot for Arkive that flips between cute and cool, sometimes wearing tiny sunglasses and sometimes not.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

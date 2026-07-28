@@ -1,0 +1,973 @@
+{
+  "ok": true,
+  "frames_root": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22870,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 264
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22904,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 243
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23544,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 266
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23094,
+          "bbox": [
+            10,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 223
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23198,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 244
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22741,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 220
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21327,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 444
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20873,
+          "bbox": [
+            13,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 433
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20325,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 428
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20277,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 405
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21789,
+          "bbox": [
+            12,
+            5,
+            180,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 460
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22569,
+          "bbox": [
+            10,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 462
+        },
+        {
+          "index": 6,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22652,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 451
+        },
+        {
+          "index": 7,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21470,
+          "bbox": [
+            10,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 425
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21327,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 444
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20873,
+          "bbox": [
+            13,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 433
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20325,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 428
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20277,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 405
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21789,
+          "bbox": [
+            12,
+            5,
+            180,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 460
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22569,
+          "bbox": [
+            10,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 462
+        },
+        {
+          "index": 6,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22652,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 451
+        },
+        {
+          "index": 7,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21470,
+          "bbox": [
+            10,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 425
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21001,
+          "bbox": [
+            17,
+            5,
+            174,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 181
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22328,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 213
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21223,
+          "bbox": [
+            5,
+            7,
+            187,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 173
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20985,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 163
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23329,
+          "bbox": [
+            5,
+            6,
+            187,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 365
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23023,
+          "bbox": [
+            6,
+            5,
+            185,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 362
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23130,
+          "bbox": [
+            8,
+            5,
+            183,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 385
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21991,
+          "bbox": [
+            5,
+            8,
+            187,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 364
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23294,
+          "bbox": [
+            5,
+            6,
+            187,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 372
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21404,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 506
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21332,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 496
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21387,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 452
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20739,
+          "bbox": [
+            29,
+            5,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 404
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20398,
+          "bbox": [
+            31,
+            5,
+            161,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 440
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21810,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 455
+        },
+        {
+          "index": 6,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19828,
+          "bbox": [
+            30,
+            5,
+            161,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 447
+        },
+        {
+          "index": 7,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21661,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 449
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20879,
+          "bbox": [
+            15,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 287
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21273,
+          "bbox": [
+            12,
+            5,
+            180,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 323
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21084,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 262
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21160,
+          "bbox": [
+            17,
+            5,
+            174,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 295
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20449,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 256
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20415,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 265
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21836,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 330
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22558,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 343
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21384,
+          "bbox": [
+            18,
+            5,
+            174,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 276
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21926,
+          "bbox": [
+            5,
+            7,
+            187,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 317
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20555,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 263
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21488,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 292
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21268,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 302
+        },
+        {
+          "index": 1,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23193,
+          "bbox": [
+            7,
+            5,
+            184,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 369
+        },
+        {
+          "index": 2,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21818,
+          "bbox": [
+            13,
+            5,
+            179,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 334
+        },
+        {
+          "index": 3,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22288,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 297
+        },
+        {
+          "index": 4,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20506,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 306
+        },
+        {
+          "index": 5,
+          "file": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21038,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 331
+        }
+      ]
+    }
+  ]
+}

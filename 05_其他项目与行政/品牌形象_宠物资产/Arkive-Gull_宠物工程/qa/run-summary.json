@@ -1,0 +1,25 @@
+{
+  "ok": false,
+  "status": "candidate_package_created",
+  "spriteVersionNumber": 2,
+  "run_dir": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet",
+  "candidate_package": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/package/arkive-gull",
+  "spritesheet": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/final/spritesheet-extended.webp",
+  "validation": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/final/validation-extended.json",
+  "chroma_despill": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/chroma-despill-extended.json",
+  "contact_sheet": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/contact-sheet-extended.png",
+  "direction_sheet": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/look-directions.png",
+  "direction_semantics": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/direction-semantics.json",
+  "blind_direction_validation": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/direction-blind-validation.json",
+  "blind_review_resolution": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/blind-review-resolution.json",
+  "continuity": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/look-continuity.json",
+  "review": "/Users/zhangtianxing/Downloads/Taala-Ark AI Native & Methodology/output/arkive-gull-pet/qa/review.json",
+  "not_installed_reason": "Mandatory blind direction QA still has hard-gate failures for 090 right and 000 up.",
+  "next_repair_scope": "Regenerate look rows 9 and 10 with stronger cardinal anchors, likely removing sunglasses only for look-direction rows so eyes/beak can carry gaze more clearly.",
+  "latest_repair": {
+    "state": "failed",
+    "reason": "The previous crying animation felt too fast and did not read clearly as crying.",
+    "result": "Replaced row 5 with a slower-feeling 8-frame crying sequence that holds the sobbing pose across frames 4 and 5, then regenerated previews, the 8x9 atlas, the 8x11 atlas, and the candidate package.",
+    "validation": "Atlas validation passed after repair."
+  }
+}

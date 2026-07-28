@@ -1,0 +1,156 @@
+{
+  "ok": true,
+  "reviewed_by": "parent",
+  "source": "qa/look-directions.png",
+  "notes": [
+    "Cardinals are visually readable at pet size: 000 up, 090 screen-right, 180 down, 270 screen-left.",
+    "Intermediate directions are accepted as a cohesive smug head-turn loop; some down-right poses have a larger posture drop, recorded as continuity warnings rather than semantic failures.",
+    "Continuity warnings about transparent rows near y=198-201 correspond to normal foot gaps at the bottom of the sprite, not interior body holes."
+  ],
+  "directions": [
+    {
+      "direction": "000",
+      "expected": "up",
+      "verdict": "pass",
+      "observed": "front body with sunglasses and beak lifted high",
+      "horizontal_evidence": "centered face; no strong left or right cue",
+      "vertical_evidence": "beak and glasses sit high on the head",
+      "reason": "Reads as looking upward."
+    },
+    {
+      "direction": "022.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "slight right turn with lifted beak",
+      "horizontal_evidence": "beak shifts toward screen-right",
+      "vertical_evidence": "head and sunglasses remain high",
+      "reason": "Reads as a small move from up toward right."
+    },
+    {
+      "direction": "045",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "clearer right turn with upward posture",
+      "horizontal_evidence": "beak protrudes screen-right",
+      "vertical_evidence": "beak remains above neutral face center",
+      "reason": "Reads as up-right."
+    },
+    {
+      "direction": "067.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "near-right gaze with slight lift",
+      "horizontal_evidence": "beak and sunglasses are shifted screen-right",
+      "vertical_evidence": "head remains lifted rather than dipped",
+      "reason": "Reads as late up-right approaching right."
+    },
+    {
+      "direction": "090",
+      "expected": "right",
+      "verdict": "pass",
+      "observed": "right-facing 3/4 profile",
+      "horizontal_evidence": "orange beak protrudes toward screen-right",
+      "vertical_evidence": "face is level, not strongly up or down",
+      "reason": "Reads as screen-right."
+    },
+    {
+      "direction": "112.5",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "right-facing head starts to dip",
+      "horizontal_evidence": "beak remains on screen-right side",
+      "vertical_evidence": "sunglasses and beak lower compared with 090",
+      "reason": "Reads as down-right."
+    },
+    {
+      "direction": "135",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "deeper right/down posture",
+      "horizontal_evidence": "beak continues to protrude screen-right",
+      "vertical_evidence": "head and glasses sit lower",
+      "reason": "Reads as down-right with a smug downward dip."
+    },
+    {
+      "direction": "157.5",
+      "expected": "down-right",
+      "verdict": "warning",
+      "observed": "very low right-facing dip",
+      "horizontal_evidence": "beak still points screen-right",
+      "vertical_evidence": "head is low and body appears crouched",
+      "reason": "Direction is readable, but the posture drop is larger than adjacent poses."
+    },
+    {
+      "direction": "180",
+      "expected": "down",
+      "verdict": "pass",
+      "observed": "front-facing low head",
+      "horizontal_evidence": "face centered with no left/right dominance",
+      "vertical_evidence": "sunglasses and beak are low, head dipped",
+      "reason": "Reads as down."
+    },
+    {
+      "direction": "202.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "downward pose beginning to turn left",
+      "horizontal_evidence": "beak shifts toward screen-left",
+      "vertical_evidence": "face remains low",
+      "reason": "Reads as early down-left."
+    },
+    {
+      "direction": "225",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "clear left/down gaze",
+      "horizontal_evidence": "beak protrudes screen-left",
+      "vertical_evidence": "head is still dipped",
+      "reason": "Reads as down-left."
+    },
+    {
+      "direction": "247.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "leftward gaze with low posture",
+      "horizontal_evidence": "beak and glasses stay on screen-left side",
+      "vertical_evidence": "sunglasses sit below neutral height",
+      "reason": "Reads as late down-left approaching left."
+    },
+    {
+      "direction": "270",
+      "expected": "left",
+      "verdict": "pass",
+      "observed": "left-facing 3/4 profile",
+      "horizontal_evidence": "orange beak protrudes toward screen-left",
+      "vertical_evidence": "face is level, not strongly up or down",
+      "reason": "Reads as screen-left."
+    },
+    {
+      "direction": "292.5",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "left-facing gaze lifting upward",
+      "horizontal_evidence": "beak remains screen-left",
+      "vertical_evidence": "head rises compared with 270",
+      "reason": "Reads as early up-left."
+    },
+    {
+      "direction": "315",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "clear left/up gaze",
+      "horizontal_evidence": "beak protrudes screen-left",
+      "vertical_evidence": "beak and sunglasses are raised",
+      "reason": "Reads as up-left."
+    },
+    {
+      "direction": "337.5",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "left-facing raised pose approaching up",
+      "horizontal_evidence": "beak remains to screen-left",
+      "vertical_evidence": "head and beak are lifted",
+      "reason": "Reads as late up-left before returning to up."
+    }
+  ]
+}

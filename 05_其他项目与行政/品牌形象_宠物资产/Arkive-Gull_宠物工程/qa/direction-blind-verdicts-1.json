@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "both beaks project leftward; sunglasses sit left-facing"
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-right",
+      "reason": "both beaks project rightward from face"
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A beak points left; B beak points right"
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "both have left-projecting beak and leftward glasses angle"
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A beak projects left; B beak projects right"
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A beak extends right; B beak extends left"
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "both beaks and sunglasses angle leftward"
+    },
+    {
+      "pair": "vertical-1",
+      "A": "down",
+      "B": "down",
+      "reason": "both heads tilt downward; beak low near scarf"
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "A glasses high with lifted face; B beak low and crown lowered"
+    },
+    {
+      "pair": "vertical-3",
+      "A": "down",
+      "B": "up",
+      "reason": "A beak low/down; B face lifted with beak high"
+    },
+    {
+      "pair": "vertical-4",
+      "A": "down",
+      "B": "up",
+      "reason": "A lowered face and low beak; B raised beak and glasses"
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "A beak lifted; B beak low near scarf"
+    },
+    {
+      "pair": "vertical-6",
+      "A": "up",
+      "B": "down",
+      "reason": "A face raised; B head bowed with beak low"
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "A lifted head and high glasses; B lowered head and low beak"
+    }
+  ]
+}

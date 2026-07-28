@@ -1,0 +1,88 @@
+const link = (route, label, description = "") => `
+  <a class="card" href="#/${route}">
+    <div class="card-number">进入页面</div><h3>${label}</h3><p>${description}</p><span class="arrow">查看 →</span>
+  </a>`;
+
+const crumb = (...items) => `<nav class="crumb">${items.map((item, i) => i === items.length - 1 ? `<span>${item[1]}</span>` : `<a href="#/${item[0]}">${item[1]}</a>`).join("<span>/</span>")}</nav>`;
+
+const stages = [
+  ["preschool", "学前—小学中低年级", "先建立现实体验、语言、阅读、规则与社交。AI 教育主要面向家长。"],
+  ["upper-elementary", "小学高年级—初中前期", "建立学习习惯、信息辨识、表达与有限场景下的 AI 协作。"],
+  ["junior-high", "初中后期", "把学科兴趣、创作和真实问题连起来，开始方向探索。"],
+  ["high-school", "高中", "形成应用或算法的方向证据，连接研究、产品、竞赛与升学。"],
+  ["college", "大学前后", "形成进入真实世界的工作能力：协作、研究、产品或工程交付。"],
+];
+
+const stageContent = {
+  preschool: { title: "学前—小学中低年级", task: "先长出语言、阅读、规则和现实社交，再谈 AI。", ai: "这一阶段的课程对象主要是家长。适合建立家庭使用规则，和孩子一起认识 AI 会出错、不能泄露个人信息。", human: "阅读、讲述、游戏、运动、同伴交往和现实体验。", proof: "一份家庭 AI 公约，以及家长和孩子共同复盘的一次 AI 错误。", avoid: "长时间陪伴式聊天、AI 代写、过早把“一句话做 App”当作能力。" },
+  "upper-elementary": { title: "小学高年级—初中前期", task: "让 AI 进入有限而清晰的学习场景。", ai: "可用于概念解释、错题分类、资料整理、基础编程和亲子创作；每次使用都保留问题、过程和验证。", human: "先自己尝试、解释理由、阅读来源、完成现实中的练习。", proof: "一份错题复盘或阅读任务记录，能说清 AI 哪一步帮了忙。", avoid: "把 AI 当答案机、把生成内容直接交作业、用工具炫技替代基础学力。" },
+  "junior-high": { title: "初中后期", task: "把兴趣变成可验证的尝试，而不是仓促选择职业。", ai: "在创作、学科研究、项目协作或简单产品中做短周期项目，了解应用线和算法线的差异。", human: "观察真实问题、选择一个愿意持续投入的主题、处理失败和反馈。", proof: "带有调研、版本、反馈和反思的小项目。", avoid: "为作品集硬做项目；把一次活动或一次兴趣当成方向定论。" },
+  "high-school": { title: "高中", task: "形成相对清楚的方向和能力证据。", ai: "应用线可深入创作、工作流、产品或 AI+X；算法线可进入数据、机器学习、大模型和工程。", human: "保持学科基础，选择可以长期深入的问题，并对数据、方法和结论负责。", proof: "研究日志、产品迭代、用户反馈、代码与实验记录等可追溯证据。", avoid: "伪造研究、包装奖项、把能跑通的 Demo 当成可交付产品。" },
+  college: { title: "大学前后", task: "将 AI 能力带入专业、项目和真实组织。", ai: "建立个人工作流，参与跨学科研究、产品实践、工程项目或实习型任务。", human: "协作、沟通、项目管理、专业判断和持续学习。", proof: "作品集、实习型项目、公开成果、真实用户或团队反馈。", avoid: "只会调用模型，不理解业务、数据、验证和交付。" },
+};
+
+function home() {
+  return `<div class="page hero"><div class="hero-grid"><section><p class="eyebrow">AI 力基础教育框架 · 讨论稿 0.3</p><h1>帮孩子找到<br/>AI 时代的成长路径</h1><p class="lead">这是一张面向家庭、学生与教育者的地图：先看年龄与基础，再进入应用或算法方向；最后把能力连接到学习、专业、职业与真实世界。</p><div class="hero-actions"><a class="button primary" href="#/methodology">从方法论开始</a><a class="button secondary" href="#/growth">查看成长规划</a></div></section><aside class="framework-card"><p class="card-kicker">AI 力，不等于会用几个工具</p><h3>AI 力，是人在具体场景中理解问题、表达需求、调用合适的 AI、验证过程与结果，并对结果承担相应责任的能力，是 AI 时代竞争的核心要素</h3><div class="feature-list"><div><span>01</span><strong>按年龄规划</strong><small>现在该补什么，不该急什么</small></div><div><span>02</span><strong>按场景学习</strong><small>学习、创作、项目、产品或研究</small></div><div><span>03</span><strong>以终为始规划</strong><small>从目标倒推今天该积累什么</small></div></div></aside></div><section class="section"><div class="section-heading entry-heading"><div><p class="eyebrow">框架结构</p><h2>四个部分，一张完整地图</h2></div><p>方法论定义方向；成长规划安排阶段；其他维度连接教育条件；产品与商业化承接真实成长。</p></div><div class="card-grid">${link("methodology", "方法论概览", "先理解 AI 力是什么，以及场景、判断、过程与责任如何连接。")}${link("growth", "成长规划", "按年龄与阶段判断重点；初中后期再进入应用或算法方向探索。")}${link("dimensions", "其他维度", "从学习提升、家庭资源、政策环境到专业与职业，补齐长期选择。")}${link("products-business", "产品与商业化", "从内容入口到服务、项目与长期培养，建立可验证的交付路径。")}</div></section></div>`;
+}
+
+function methodology() {
+  const principles = [["先成人，后工具", "语言、阅读、专注、现实社交和责任感，不能由 AI 替代建立。"], ["先场景，后技巧", "先问要解决什么问题，再谈工具、提示和效率。"], ["先问题，后项目", "项目要回应真实观察，而不是为了作品集套一个 AI 外壳。"], ["先证据，后包装", "来源、版本、测试、反馈与反思，比成品更能说明能力。"], ["责任随能力升级", "个人 Demo、可用产品、研究和工程系统，需要不同标准。"], ["AI 用来放大人", "AI 可以辅助解释、反馈和创造，但不能绕开人的成长。"]];
+  return `<div class="page">${crumb(["home","首页"],["methodology","方法论概览"])}<p class="eyebrow">第一部分</p><h1>方法论概览</h1><p class="lead">AI 力不是会几个工具，而是在具体场景中理解问题、表达需求、调用合适的 AI、验证过程和结果，并对结果承担相应责任。</p><section class="section"><div class="split"><div class="panel"><span class="mini-label">两条长期主线</span><h3>AI 应用线</h3><p>在学习、创作、协作、产品和行业场景中，和 AI 一起完成有价值的工作。</p></div><div class="panel"><span class="mini-label">两条长期主线</span><h3>AI 算法线</h3><p>理解、构建、评估、改进和部署 AI 系统，进入数据、模型、工程或研究。</p></div></div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">共同底座</p><h2>工具之外，所有路径共享什么</h2></div></div><div class="card-grid">${["阅读与信息提取","清晰表达","逻辑与证据意识","问题意识","数据敏感度","审美与创造力","协作与自我管理","伦理与责任感"].map(x=>`<div class="card"><h3>${x}</h3><p>它决定学习者能否判断、验证并对自己的选择负责。</p></div>`).join("")}</div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">场景化分层</p><h2>不是学工具，而是按目标确定深度</h2></div><p>同一个 AI 能力，在不同场景、目标和责任下，需要完全不同的学习程度。</p></div><div class="table-wrap"><table><thead><tr><th>层级</th><th>典型场景</th><th>需要形成的能力证据</th></tr></thead><tbody><tr><td>基础调用</td><td>聊天、检索、个人事务与简单生成</td><td>能表达需求、识别边界并核验基本事实</td></tr><tr><td>场景协作</td><td>学习、创作、文件管理、项目梳理与工作辅助 Copilot</td><td>能拆任务、管理过程、保留记录并对结果复盘</td></tr><tr><td>专业应用</td><td>视频分镜、音乐制作、产品设计、AI 编程与研究项目</td><td>能使用领域方法，完成从规划到交付的完整工作流</td></tr><tr><td>系统与算法</td><td>数据库与系统设计、代码审查、模型训练、推理与工程部署</td><td>能理解技术原理、评测风险，并承担用户、团队或研究责任</td></tr></tbody></table></div></section><section class="section"><p class="eyebrow">六条原则</p><div class="principles">${principles.map((p,i)=>`<div class="principle"><span>0${i+1}</span><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join("")}</div></section></div>`;
+}
+
+function growth() {
+  return `<div class="page">${crumb(["home","首页"],["growth","成长规划"])}<p class="eyebrow">第二部分</p><h1>成长规划</h1><p class="lead">年龄不是一张机械的课程表，而是判断“现在最该补什么”的坐标。基础能力不足时先补底座；兴趣和能力成熟时，再进入方向探索。</p><section class="section"><div class="timeline">${stages.map(s=>`<a class="timeline-item" href="#/${s[0]}"><div class="age">${s[1]}</div><p>${s[2]}</p></a>`).join("")}</div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">每个阶段的展开模板</p><h2>不只写“学什么”，还要写清六件事</h2></div></div><div class="split"><div class="panel"><h3>目标与场景</h3><p>这一阶段的核心发展任务是什么？AI 能进入哪些有限而明确的场景？</p></div><div class="panel"><h3>人的动作与练习</h3><p>哪些动作必须亲自完成？什么任务能练习，而不是只展示结果？</p></div><div class="panel"><h3>证据与风险</h3><p>如何留下过程证据？要避免依赖、代写、隐私泄露和过度屏幕使用等哪些风险？</p></div><div class="panel"><h3>方向探索</h3><p>初中后期至高中，才开始把兴趣、学科基础和长期投入意愿连接到应用或算法方向。</p></div></div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">阶段页面</p><h2>按当前所处阶段进入</h2></div></div><div class="card-grid">${stages.map((s,i)=>`<a class="card" href="#/${s[0]}"><div class="card-number">阶段 ${i+1}</div><h3>${s[1]}</h3><p>${s[2]}</p><span class="arrow">查看这一阶段 →</span></a>`).join("")}</div></section><section class="section"><div class="info-strip">初中后期至高中是“方向展开”的阶段：先理解学生更享受解决真实应用问题，还是更愿意深入模型、数据与技术原理；再选择相应的应用线或算法线，而不是匆忙定职业。</div></section></div>`;
+}
+
+function stage(route) { const s = stageContent[route]; return `<div class="page">${crumb(["home","首页"],["growth","成长规划"],[route,s.title])}<p class="eyebrow">成长阶段</p><h1>${s.title}</h1><p class="lead">${s.task}</p><section class="section"><div class="split"><div class="panel"><span class="mini-label">AI 可以怎样进入</span><p>${s.ai}</p></div><div class="panel"><span class="mini-label">人必须亲自完成</span><p>${s.human}</p></div><div class="panel"><span class="mini-label">可证明的成长</span><p>${s.proof}</p></div><div class="panel"><span class="mini-label">需要避免</span><p>${s.avoid}</p></div></div></section><section class="section"><h2>下一步</h2><div class="page-links"><a class="page-link" href="#/growth"><small>返回</small><span>成长规划总览</span></a><a class="page-link" href="#/methodology"><small>回看</small><span>共同能力底座与六条原则</span></a></div></section></div>`; }
+
+function dimensions() { return `<div class="page">${crumb(["home","首页"],["dimensions","其他维度"])}<p class="eyebrow">第三部分</p><h1>其他维度</h1><p class="lead">方向探索之外，还有四个持续影响家庭决策的维度：学习提升、家庭资源、教育环境，以及专业与职业。</p><section class="section"><div class="card-grid">${link("learning", "AI 与学习提升", "怎样用 AI 暴露理解缺口、组织练习和复盘，而不是更快拿到答案。")}${link("family", "AI 与家庭资源", "不同城市、设备、语言和陪伴条件下，如何建立低成本、可持续的学习环境。")}${link("policy", "AI 与教育环境", "怎样把政策、学校课程、新工具和行业变化翻译成家庭可执行的判断。")}${link("majors-careers", "AI 时代的专业与职业", "把应用线、算法线及人文社科路径连接到专业基础和真实岗位。")}</div></section></div>`; }
+
+const dimensionPages = {
+  learning: { title:"AI 与学习提升", lead:"AI 的价值不在于直接给答案，而在于减少低价值耗时、暴露理解缺口，并建立反馈循环。", cards:[["预习","用概念地图和分层问题进入陌生内容；学生仍需阅读教材、标出不懂处、形成自己的猜想。"],["订正","帮助分类错因、生成变式题、追溯漏洞；学生要自己重做并解释错因。"],["写作与表达","用 rubric 检查结构、寻找反例、获得修改建议；立意、证据选择和最终改写属于学生。"],["研究性学习","协助找线索、整理文献、初步分析数据；判断来源、研究设计和结论必须由人承担。"]], note:"基本纪律：先尝试，再求助；要求解释，而非代答；重要结论可追溯。" },
+  family: { title:"AI 与家庭资源", lead:"AI 教育不应变成拼设备、拼海外项目和拼昂贵服务。资源不同，路径应不同；底层能力和过程记录仍然可积累。", cards:[["先保住基础学力","阅读、写作、数学、英语、科学探究和基本编程，比追工具更重要。"],["善用公共资源","国家平台、公开课程、图书馆、科技馆、学校社团和开源社区都可成为起点。"],["从本地问题开始","家乡文旅、农业、环境、老人服务、校园管理和地方文化整理，都能成为真实项目。"],["记录而非包装","保存笔记、调研、代码、版本和失败过程；它们是能力证据，也可能成为升学材料。"]], note:"高年级、方向更明确后，再按兴趣寻找能提供真实反馈的导师或社群；不要只看头衔。" },
+  policy: { title:"AI 与教育环境", lead:"政策、新工具和学校动作变化很快。家庭不必追每一条新闻，但要会做一次教育翻译。", cards:[["看清原文","政策具体说了什么、覆盖谁、是否已经落地？不要只看二手标题。"],["分辨影响","它改变的是课程、评价、资源获取，还是只是小范围试点？"],["回到家庭","对不同年龄、地区和目标有什么实际意义？现在要行动，还是继续观察？"],["持续观察","中小学 AI 教育、大学专业与招生、区域资源、行业岗位、版权和隐私规则。"]], note:"每次政策或新工具观察，最后都应回答同一个问题：它对学生、家长和学习选择意味着什么？" },
+};
+
+function dimension(route) { const p = dimensionPages[route]; return `<div class="page">${crumb(["home","首页"],["dimensions","其他维度"],[route,p.title])}<p class="eyebrow">其他维度</p><h1>${p.title}</h1><p class="lead">${p.lead}</p><section class="section"><div class="split">${p.cards.map(c=>`<div class="panel"><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join("")}</div></section><section class="section"><div class="info-strip">${p.note}</div></section></div>`; }
+
+function productsBusiness() {
+  const products = [
+    ["内容入口", "家长、学生与教育者", "AI 教育观、AI 实战、AI 观察", "用案例、判断和可复用方法建立信任，而不是追热点卖工具"],
+    ["轻量服务", "低龄家庭、初高中学生", "家庭 AI 公约工作坊、AI 学习工作坊", "一份家庭规则；一个具体学习场景中的使用与复盘框架"],
+    ["项目制培养", "有明确兴趣的初高中学生", "AI+专业探索、创作或产品短项目", "方向判断、过程记录、作品或可演示原型"],
+    ["高阶探索", "明确走 AI、CS 或 AI+科学方向的学生", "AI+X 研究、科创/竞赛、算法与工程进阶", "可复现实验、研究/工程项目与长期能力档案"],
+  ];
+  return `<div class="page">${crumb(["home","首页"],["products-business","产品与商业化"])}<p class="eyebrow">第四部分</p><h1>用产品承接真实成长，<br/>而不是把焦虑变现</h1><p class="lead">内容的作用是帮助家庭看清问题；产品的作用是提供练习、反馈和可以验证的交付。商业化应沿着教育价值自然发生。</p><section class="section"><div class="section-heading"><div><p class="eyebrow">四层产品路径</p><h2>每一层都有独立目标与交付</h2></div><p>先建立判断权，再验证轻量服务，随后进入项目制与高阶培养。</p></div><div class="card-grid">${link("content-entry", "内容入口", "AI 教育观、AI 实战派、AI 现场观察：从家庭问题出发建立信任。")}${link("light-services", "轻量服务", "用测评、咨询与家长/学生工作坊处理当下的具体问题。")}${link("project-programs", "项目制培养", "通过 AI+专业探索、创作与产品短项目形成能力证据。")}${link("advanced-exploration", "高阶探索", "面向高潜学生推进研究、科创、算法与工程长期培养。")}</div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">增长逻辑</p><h2>从内容入口到长期培养</h2></div></div><div class="principles business-flow"><div class="principle"><span>01</span><h3>内容建立信任</h3><p>持续回答“这对学生意味着什么”，让家庭形成自己的判断。</p></div><div class="principle"><span>02</span><h3>服务验证需求</h3><p>用工作坊处理当下的具体问题，观察真实反馈与复购意愿。</p></div><div class="principle"><span>03</span><h3>项目形成能力</h3><p>通过作品、产品或研究，积累持续的能力证据。</p></div><div class="principle"><span>04</span><h3>长期培养再扩展</h3><p>课程、师资和评价验证后，再发展高阶项目及机构合作。</p></div></div></section><section class="section"><div class="info-strip">低龄阶段先服务家长；方向明确后再进入学生项目；高阶产品必须以真实过程、反馈和可复现成果为交付。</div></section></div>`;
+}
+
+function contentEntry() { return `<div class="page">${crumb(["home","首页"],["products-business","产品与商业化"],["content-entry","内容入口"])}<p class="eyebrow">第四部分 · 第一章</p><h1>内容入口</h1><p class="lead">这个内容入口不是追新工具、讲提示词的账号，而是中国家庭理解 AI 教育的入口：帮助家长建立判断，让学生从“会调用”走向“会判断、会验证、能完成事情”。</p><section class="section"><div class="card-grid"><div class="card"><div class="card-number">01 · 思想主栏目</div><h3>AI 教育观</h3><p>回答家长最容易被短视频带偏的问题：不同年龄的边界、AI 素养与 AI 编程的区别、孩子在学习/创作/产品/科研中该学到什么程度，以及为什么“会几个工具”不等于有 AI 力。</p><span class="arrow">适合：成长长文、图文轮播、系列问答</span></div><div class="card"><div class="card-number">02 · 收藏转发栏目</div><h3>AI 实战派</h3><p>不做单纯工具教程，而是展示在具体任务里怎样把 AI 用对：学习、创作、文件与项目工作流、个人 Demo、产品经理、学术项目，以及家长如何通过过程判断孩子是在提效还是偷懒。</p><span class="arrow">固定结构：场景 → 人的部分 → AI 参与 → 核验 → 误区 → 成果</span></div><div class="card"><div class="card-number">03 · 观察破圈栏目</div><h3>AI 现场观察</h3><p>关注模型、产品、学校课程、大学项目、实验室、政策和一线访谈，但不做新闻搬运；每次完成一次“教育翻译”：发生了什么、改变什么、哪些只是营销、家庭是否需要行动。</p><span class="arrow">适合：现场观察、访谈、政策与行业解读</span></div></div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">内容分层</p><h2>同一主题，按人群表达</h2></div><p>家长是稳定决策者，学生是直接使用者，教育者与从业者是专业传播者。</p></div><div class="split"><div class="panel"><h3>给家长</h3><p>讲年龄边界、风险、路径和家庭可执行的规则，降低“孩子是不是落后了”的焦虑。</p></div><div class="panel"><h3>给学生</h3><p>给可练习的任务、真实的交付标准和应用/算法方向的选择依据。</p></div><div class="panel"><h3>给教育者与从业者</h3><p>讨论课程设计、能力分层、评价证据和 AI 如何进入学校与组织。</p></div></div></section><section class="section"><div class="split"><div class="panel"><span class="mini-label">每条内容的最低结构</span><h3>从一个真实问题开始</h3><p>明确场景、年龄或目标人群；先说人的任务，再说 AI 能参与什么；给出核验动作、风险边界和下一步。</p></div><div class="panel"><span class="mini-label">内容到产品</span><h3>让读者自然走向练习</h3><p>内容建立共同语言，测评/咨询帮助定位，工作坊提供反馈，项目与长期培养交付可追溯的能力证据。</p></div></div></section><section class="section"><div class="info-strip">内容入口的核心指标不是追逐热点，而是持续降低家庭决策成本，让读者找到适合自己年龄、目标与资源的下一步。</div></section></div>`; }
+
+const productLayerPages = {
+  "light-services": { title:"轻量服务", kicker:"第四部分 · 第二章", lead:"用低门槛、短周期的服务，把家庭的模糊焦虑转化为一个可以处理的问题。", cards:[["AI 素养测评 / 咨询","判断当前阶段、风险和下一步，形成家庭可理解的诊断记录。"],["家庭 AI 公约工作坊","面向低龄至初中家庭，建立设备、时间、隐私、作业与情感陪伴的边界。"],["AI 学习工作坊","围绕预习、错题、阅读或写作，练习先尝试、再求助、要求解释并复盘。"],["学生场景短营","面向初高中学生，练习学习、创作、文件管理和项目协作中的真实使用。"]], note:"轻量服务的交付不是一堆提示词，而是一份判断记录、一套家庭规则，或一个具体场景中的使用与复盘框架。"},
+  "project-programs": { title:"项目制培养", kicker:"第四部分 · 第三章", lead:"当学生已有明确兴趣，用短周期项目把方向探索变成可观察、可复盘的能力证据。", cards:[["AI+专业探索","从创作、产品、科研、教育、商业或人文社会议题中选择真实问题。"],["创作项目","从分镜、素材、生成、编辑到版权与发布，形成完整作品流程。"],["产品短项目","从用户问题、需求表达、原型、数据库/系统意识到 Code Review 与核验，区分 Demo 和可用产品。"],["研究性项目","保留问题、资料、方法、实验、失败、反馈与结论，避免 AI 代写研究。"]], note:"项目制产品的核心交付是方向判断、过程记录、作品/原型或研究报告，而不是一次性展示。"},
+  "advanced-exploration": { title:"高阶探索", kicker:"第四部分 · 第四章", lead:"面向明确走 AI、CS、AI+科学或工程方向的学生，进入更长周期、更高责任的训练。", cards:[["AI+X 研究","把 AI 与科学、设计、教育、商业、人文社会问题结合，完成可复现实验。"],["科创与竞赛","围绕真实问题形成研究假设、方法、数据和公开答辩证据，不用包装替代能力。"],["算法与工程进阶","系统学习数学、编程、数据、机器学习、深度学习、大模型、推理与部署。"],["长期能力档案","持续保存代码、实验、版本、反馈、文档和反思，形成可追溯的成长记录。"]], note:"高阶培养必须有真实导师反馈、过程证据和明确评价标准；证书、热点和“快速变强”不能替代研究与工程能力。"}
+};
+
+function productLayer(route) { const p = productLayerPages[route]; return `<div class="page">${crumb(["home","首页"],["products-business","产品与商业化"],[route,p.title])}<p class="eyebrow">${p.kicker}</p><h1>${p.title}</h1><p class="lead">${p.lead}</p><section class="section"><div class="card-grid">${p.cards.map((c,i)=>`<div class="card"><div class="card-number">0${i+1}</div><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join("")}</div></section><section class="section"><div class="info-strip">${p.note}</div></section><section class="section"><h2>返回产品与商业化</h2><div class="page-links"><a class="page-link" href="#/products-business"><small>返回</small><span>四层产品路径总览</span></a><a class="page-link" href="#/content-entry"><small>先看</small><span>内容入口</span></a></div></section></div>`; }
+
+function majorsCareers() { const rows = [["创作生产","视觉传达、数字媒体艺术、影视/动画、游戏设计、交互设计","AI 设计师、创意技术师、数字内容制作人、交互设计师"],["知识与工作","信息管理、商业分析、教育技术、公共管理、相关领域学科","AI 自动化运营、知识管理/研究助理、项目经理、解决方案顾问"],["软件与产品","计算机、软件工程、信息管理、交互设计、商业分析","AI 产品经理、产品运营、解决方案架构师、软件工程师"],["AI+人文社会应用","中文、外语、历史、哲学、社会学、人类学、新闻传播、教育学、心理学、法学","内容策略/编辑、用户研究员、AI 伦理与治理专员、教育产品经理、计算人文研究助理"],["数据与机器学习","计算机科学、人工智能、统计、数据科学、应用数学","算法工程师、数据科学家、机器学习工程师、应用研究员"],["大模型、系统与算法创新","人工智能、计算机系统、电子/自动化、机器人","大模型工程师、ML 平台工程师、AI 系统工程师、研究员"]]; return `<div class="page">${crumb(["home","首页"],["dimensions","其他维度"],["majors-careers","AI 时代的专业与职业"])}<p class="eyebrow">新增章节</p><h1>AI 时代的专业与职业</h1><p class="lead">专业与岗位要分两层理解：专业决定学生需要补哪些学科、方法和训练；岗位描述未来会在真实组织里承担什么工作。两者有关，但并非一一对应。</p><section class="section"><div class="table-wrap"><table><thead><tr><th>AI 兴趣/能力场景</th><th>可衔接专业</th><th>典型岗位</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}</tbody></table></div></section><section class="section"><div class="split"><div class="panel"><span class="mini-label">应用线</span><h3>先从场景和领域出发</h3><p>判断学生愿意长期进入创作、产品、知识工作、行业应用还是人文社会议题；再补足领域理解、工作流与交付能力。</p></div><div class="panel"><span class="mini-label">算法线</span><h3>先判断是否愿意走深技术训练</h3><p>重点不只是模型热不热门，而是是否能持续投入数学、代码、实验、系统和工程训练。</p></div></div></section><section class="section"><div class="info-strip">职业名称会变化，但稳定的判断标准是：是否能在一个领域定义问题、判断 AI 输出，并和他人完成可靠交付。</div></section></div>`; }
+
+const pages = { home, methodology, growth, dimensions, "majors-careers": majorsCareers, "products-business": productsBusiness, "content-entry": contentEntry, ...Object.fromEntries(Object.keys(productLayerPages).map(k=>[k,()=>productLayer(k)])), ...Object.fromEntries(stages.map(s=>[s[0],()=>stage(s[0])])), ...Object.fromEntries(Object.keys(dimensionPages).map(k=>[k,()=>dimension(k)])) };
+
+function render() {
+  const route = location.hash.replace(/^#\//, "") || "home";
+  const page = pages[route] || pages.home;
+  document.title = `${route === "home" ? "AI 力基础教育框架" : "AI 力基础教育框架 · " + route}`;
+  document.querySelector("#app").innerHTML = page();
+  document.querySelectorAll(".main-nav a").forEach(a => a.classList.toggle("active", a.getAttribute("href") === `#/${route}`));
+  document.querySelector("#app").focus({preventScroll: true});
+  window.scrollTo({top: 0, behavior: "instant"});
+}
+
+window.addEventListener("hashchange", render);
+document.querySelector(".menu-button").addEventListener("click", (e) => {
+  const nav = document.querySelector(".main-nav"); nav.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", nav.classList.contains("open"));
+});
+document.querySelector(".main-nav").addEventListener("click", () => document.querySelector(".main-nav").classList.remove("open"));
+render();
