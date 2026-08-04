@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; color: #222; }
+header, section, footer { padding: 16px 20px; }
+h1 { margin: 8px 0 4px; }
+h2 { margin: 12px 0; }
+.actions, .uploads { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0; }
+button { padding: 8px 12px; border: 1px solid #bbb; background: #fff; border-radius: 6px; cursor: pointer; }
+button:hover { background: #f5f7ff; }
+.hint { color: #555; }
+.defaults { color: #9d6; font-weight: 600; }
+.hidden { display: none; }
+.table { width: 100%; overflow: auto; border: 1px solid #e5e5e5; border-radius: 8px; }
+.table table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 8px; border-bottom: 1px solid #eee; }
+.table th { text-align: left; font-weight: 400; }
+.table td { text-align: right; }
+.table thead th { background: #fafafa; position: sticky; top: 0; }
+.table td[contenteditable="true"] { background: #fffef5; outline: none; }
+.strong-row th, .strong-row td { font-weight: 600; background-color: #f7f9fc; }
+.topParams .param-row { margin: 4px 0; }
+.topParams .unit { margin-left: 4px; color: #555; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tools { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+.quantiles { display: flex; gap: 16px; margin-top: 8px; }
+.chartRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.chartCard { border: 1px solid #eaeaea; border-radius: 8px; padding: 12px; background: #fff; }
+.heatmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px; }
+.heatCell { height: 48px; border-radius: 6px; position: relative; display: flex; align-items: center; justify-content: center; color: #222; font-size: 12px; }
+.heatCell:hover::after { content: attr(data-title); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #000; color: #fff; padding: 6px 8px; border-radius: 6px; white-space: nowrap; font-size: 12px; opacity: 0.95; }
+.term { border-bottom: 1px dotted #888; cursor: help; position: relative; }
+.term:hover::after { content: attr(data-explain); position: absolute; top: 120%; left: 0; background: #111; color: #fff; padding: 6px 8px; border-radius: 6px; font-size: 12px; white-space: nowrap; }
+footer { font-size: 12px; color: #555; }
+@media (max-width: 900px) { .chartRow { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr 1fr; } }

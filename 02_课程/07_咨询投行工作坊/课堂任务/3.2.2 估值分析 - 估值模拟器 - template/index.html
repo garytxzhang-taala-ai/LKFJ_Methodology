@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DCF 估值与可比公司分析工具</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>DCF 估值与可比公司分析工具</h1>
+    <p>估值基准日：<strong>2025-12-31</strong>；预测期：<strong>2026-2030</strong>（不可修改）</p>
+    <div class="topParams">
+      <div class="param-row"><label><span class="term" data-explain="加权平均资本成本（WACC）。用于折现未来现金流，反映融资成本与风险水平。">WACC</span>：<input type="number" id="inputWacc" step="0.1" min="0" max="100" /><span class="unit">%</span></label></div>
+      <div class="param-row"><label><span class="term" data-explain="永续期增长率（g）。用于终值计算，反映长期稳定增长假设。">g</span>：<input type="number" id="inputG" step="0.1" min="-20" max="20" /><span class="unit">%</span></label></div>
+      <div class="param-row"><label><span class="term" data-explain="所得税率。用于计算税费与净利润。">税率</span>：<input type="number" id="inputTax" step="0.1" min="0" max="100" /><span class="unit">%</span></label></div>
+    </div>
+  </header>
+
+  <section id="guide">
+    <h2>用户指引</h2>
+    <ol>
+      <li>下载两份标准模板（预测数据 CSV、可比公司 CSV）。</li>
+      <li>在模板中填写数据后上传至系统。</li>
+      <li>系统自动生成 DCF 与可比公司分析结果。</li>
+      <li>可以在下方表格直接修改，结果将实时更新。</li>
+    </ol>
+    <div class="actions">
+      <button id="downloadForecast">下载模板：预测数据 CSV</button>
+      <button id="downloadComps">下载模板：可比公司 CSV</button>
+    </div>
+    <div class="uploads">
+      <label>上传预测数据 CSV：<input type="file" id="uploadForecast" accept=".csv" /></label>
+      <label>上传可比公司 CSV：<input type="file" id="uploadComps" accept=".csv" /></label>
+    </div>
+    <p id="defaultsMsg" class="defaults hidden">⚙️ 缺失数据已自动填充默认值。</p>
+  </section>
+
+  <section id="inputs">
+    <h2>预测输入（可编辑）</h2>
+    <div id="forecastTable" class="table"></div>
+  </section>
+
+  <section id="results">
+    <h2>DCF 估值结果</h2>
+    <div class="metrics">
+      <div><span class="term" data-explain="Free Cash Flow 自由现金流">FCF</span> 现值合计：<strong id="pvFcf">-</strong></div>
+      <div><span class="term" data-explain="Terminal Value 终值">TV</span> 现值：<strong id="pvTv">-</strong></div>
+      <div><span class="term" data-explain="Enterprise Value 企业价值">EV</span>：<strong id="ev">-</strong></div>
+      <div><span class="term" data-explain="Equity Value 股权价值">Equity Value</span>：<strong id="equity">-</strong></div>
+      <div>EV/EBIT（2026）：<strong id="evEbit">-</strong></div>
+      <div>EV/Revenue（2026）：<strong id="evRev">-</strong></div>
+      <div>EV/EBITDA（2026）：<strong id="evEbitda">-</strong></div>
+    </div>
+    <h3>年度计算表</h3>
+    <div id="detailTable" class="table"></div>
+  </section>
+
+  <section id="comps">
+    <h2>可比公司分析</h2>
+    <div class="tools">
+      <label>排序：
+        <select id="sortKey">
+          <option value="ev_ebit">EV/EBIT</option>
+          <option value="ev_ebitda">EV/EBITDA</option>
+          <option value="ev_rev">EV/Revenue</option>
+          <option value="ev">EV</option>
+          <option value="rev">收入</option>
+        </select>
+      </label>
+      <label>筛选公司名：<input type="text" id="filterName" placeholder="输入关键字" /></label>
+    </div>
+    <div id="compsTable" class="table"></div>
+    <div class="quantiles">
+      <div>25%分位：<strong id="q25">-</strong></div>
+      <div>50%分位（中位数）：<strong id="q50">-</strong></div>
+      <div>75%分位：<strong id="q75">-</strong></div>
+    </div>
+  </section>
+
+  <section id="charts">
+    <h2>可视化</h2>
+    <div class="chartRow">
+      <div class="chartCard">
+        <h3>业务1/2销量与单价趋势</h3>
+        <canvas id="bizChart"></canvas>
+      </div>
+      <div class="chartCard">
+        <h3>收入、EBIT、FCF变化</h3>
+        <canvas id="perfChart"></canvas>
+      </div>
+    </div>
+    <div class="chartRow">
+      <div class="chartCard">
+        <h3>EV/EBIT 对比（目标 vs 同行）</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chartCard">
+        <h3>可比公司估值区间热力图（EV/EBIT）</h3>
+        <div id="heatmap" class="heatmap"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>说明：不包含营运资金变动、无风险利率、市场风险溢价、债务金额、非经营净资产等输入；若缺失则使用默认假设。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
